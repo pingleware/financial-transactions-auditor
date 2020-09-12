@@ -1,6 +1,3 @@
-const { connect } = require("mongoose");
-const { response } = require("express");
-
 const FILES_TO_CAHE = [
     "/",
     "/index.html",
@@ -8,7 +5,10 @@ const FILES_TO_CAHE = [
     "/manifest.webmanifest",
     "/icons/icon-192x192.png",
     "/icons/icon-512x512.png",
-    "/styles.css"
+    "/css/styles.css",
+    "/css/bootstrap.min.css",
+    "/db.js",
+    "/images/Show-me-the-money.png"
 ];
 
 const CACHE_NAME = "static-cache-v1";
@@ -19,7 +19,7 @@ self.addEventListener("install", function (event) {
     // pre cached all static assets
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
-            console.log("Stattic files pre chached successfuly!");
+            console.log("Static files pre chached successfuly!");
             return cache.addAll(FILES_TO_CAHE)
         })
     );

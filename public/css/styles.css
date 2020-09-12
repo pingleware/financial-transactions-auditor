@@ -49,3 +49,18 @@ tr:nth-child(even) {
   width: 90%;
   margin: 0 auto;
 }
+
+.transaction-btns {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-image: url(../images/Show-me-the-money.png);
+  background-repeat: no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
