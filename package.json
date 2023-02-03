@@ -1,28 +1,27 @@
 {
-  "name": "budget-app",
+  "name": "financial-transactions-auditor",
   "version": "1.0.0",
-  "description": "",
+  "description": "An online/offline financial transactions auditing app integrated with BestBooks",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "lite-server": "lite-server"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "PRESSPAGE ENTERTAINMENT INC dba PINGLEWARE <maintainers@pipngleware.work>",
+  "license": "CC-BY-4.0",
   "bugs": {
-    "url": "https://github.com/coding-boot-camp/unit18hw/issues"
+    "url": "https://support.pingleware.work"
   },
   "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
   "dependencies": {
+    "@pingleware/bestbooks-core": "1.1.5",
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "lite-server": "^2.5.3",
-    "mongoose": "^5.5.15",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "yargs": "github:yargs/yargs"
   }
 }
