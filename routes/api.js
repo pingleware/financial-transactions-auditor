@@ -2,33 +2,26 @@ const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
 
 router.post("/api/transaction", ({body}, res) => {
-  Transaction.create(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(404).json(err);
-    });
+  console.log(`line 5: ${body}`);
+  var transaction = new Transaction();
+  transaction.create(body, function(dbTransaction){
+    res.json(dbTransaction);
+  });
 });
 
 router.post("/api/transaction/bulk", ({body}, res) => {
-  Transaction.insertMany(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(404).json(err);
-    });
+  console.log(`line 17: ${JSON.stringify(body)}`);
+  var transaction = new Transaction();
+  transaction.insertMany(body, function(dbTransaction){
+    res.json(dbTransaction);
+  });
 });
 
 router.get("/api/transaction", (req, res) => {
-  Transaction.find({}).sort({date: -1})
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(404).json(err);
-    });
+  var transaction = new Transaction();
+  transaction.find({date: -1}, function(dbTransaction){
+    res.json(dbTransaction);
+  });
 });
 
 module.exports = router;
