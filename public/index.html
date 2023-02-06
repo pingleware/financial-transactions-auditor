@@ -22,18 +22,19 @@
     <div class="jumbotron">
       <h1 class="display-3">Financial Transactions Auditor</h1>
       <h2 class="lead">An app to easily track your finances.</h2>
-      <p>Click the "Show me da money" button if adding funds or "There goes mah money" button if spending the funds.</p>
+      <p style="display:none;">Click the "Show me da money" button if adding funds or "There goes mah money" button if spending the funds.</p>
+      <p>For public viewing of company performance</p>
       <div class="total">
         <div class="total">Money in the bank: $<span id="total">0</span></div>
       </div>
     </div>
-    <div class="form">
+    <div class="form" style="display:none;">
       <input type="text" id="t-name" placeholder="Name of transaction" />
       <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
       <p class="error"></p>
     </div>
 
-    <div class="transaction-btns">
+    <div class="transaction-btns" style="display:none;">
       <button type="button" id="add-btn" class="btn btn-success btn-lg"><i class="fa fa-plus buttons"></i> Show me da
         money!!!</button>
       <button type="button" id="sub-btn" class="btn btn-primary btn-lg"><i class="fa fa-minus"></i> There goes mah
