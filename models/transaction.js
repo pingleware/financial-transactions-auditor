@@ -42,7 +42,7 @@ class Transaction {
     if (body.date == -1) {
       var sql = `SELECT account_name as name,  txdate as date, debit  as  value FROM ledger WHERE debit>0  
       UNION
-      SELECT account_name as name,  txdate as date, credit  as  value FROM ledger WHERE credit>0;`;
+      SELECT account_name as name,  txdate as date, credit  as  value FROM ledger WHERE credit>0 ORDER BY txdate ASC;`;
 
       const model = new Model();
       model.query(sql, function(results){
